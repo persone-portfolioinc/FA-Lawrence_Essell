@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Finance Analyst Portfolio | ACCA Certified | Expertise in Financial Reporting and Strategic Planning" />
   <title>Finance Analyst Portfolio | ACCA Certified</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
@@ -14,231 +15,363 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e6f0fa 0%, #f4f7f9 100%);
-      color: #1b2a49;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1a2b4b;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    header {
-      background: linear-gradient(90deg, #1b2a49 0%, #2c4b8c 100%);
-      color: white;
-      text-align: center;
-      padding: 2rem;
+    /* Navigation */
+    nav {
+      background: linear-gradient(90deg, #1a2b4b 0%, #2c4b8c 100%);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 1rem 2rem;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: background 0.3s ease;
     }
 
-    header.sticky {
-      background: #1b2a49;
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    .nav-logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      color: #d4a017;
     }
 
-    h1, h2, h3 {
-      font-family: 'Roboto', sans-serif;
-      color: #1b2a49;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      font-size: 1.4rem;
-    }
-
-    .contact-links {
-      margin-top: 1rem;
-    }
-
-    .contact-links a {
+    .nav-links a {
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
       font-size: 1rem;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      transition: background 0.3s, transform 0.3s;
+      font-weight: 400;
+      transition: color 0.3s, transform 0.3s;
     }
 
-    .contact-links a:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #d4a017;
       transform: translateY(-2px);
     }
 
-    .headshot {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: url('https://persone-portfolioinc.github.io/FA-Lawrence_Essell/lawEx.JPG') no-repeat center;
-      background-size: cover;
-      margin: 0 0 1rem auto;
-      border: 4px solid #fff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
     }
 
-    .headshot:hover {
-      transform: scale(1.05);
-    }
-
-    .section {
-      margin-bottom: 3rem;
-    }
-
-    .skills ul {
-      list-style: none;
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1551288049-b1f3a0a76c46?q=80&w=2070&auto=format&fit=crop') no-repeat center/cover;
+      height: 100vh;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      color: white;
     }
 
-    .skills li {
-      background: #e6f0fa;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26, 43, 75, 0.7);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: #d4a017;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
       transition: background 0.3s, transform 0.3s;
     }
 
-    .skills li:hover {
-      background: #2c4b8c;
-      color: white;
-      transform: translateY(-3px);
+    .cta-button:hover {
+      background: #b88c14;
+      transform: scale(1.05);
     }
 
-    .project {
-      background: #fafafa;
-      padding: 1.5rem;
-      border-radius: 10px;
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #1a2b4b;
       margin-bottom: 1.5rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Headshot */
+    .headshot {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: url('https://persone-portfolioinc.github.io/FA-Lawrence_Essell/lawEx.JPG') no-repeat center/cover;
+      margin: 0 auto 2rem;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .headshot:hover {
+      transform: scale(1.1);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-item {
+      background: #e2e8f0;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .skill-item:hover {
+      background: #d4a017;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    /* Projects */
+    .project {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 2rem;
     }
 
     .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .project h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
     .project a {
-      color: #0066cc;
+      display: inline-block;
+      margin-top: 1rem;
+      color: #d4a017;
       text-decoration: none;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: background 0.3s;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
     .project a:hover {
-      background: #e6f0fa;
+      color: #b88c14;
     }
 
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .contact-form button {
+      padding: 0.75rem 2rem;
+      background: #d4a017;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #b88c14;
+    }
+
+    /* Footer */
     footer {
-      background: #1b2a49;
+      background: #1a2b4b;
       color: white;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
       font-size: 0.9rem;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1a2b4b;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
       .container {
         margin: 1rem;
         padding: 1.5rem;
       }
 
-      h1 {
-        font-size: 2rem;
-      }
-
       .headshot {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 1rem;
-      }
-
-      .contact-links a {
-        display: inline-block;
-        margin: 0.5rem;
-      }
-
-      .skills ul {
-        justify-content: center;
+        width: 150px;
+        height: 150px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 data-aos="fade-down">Finance Analyst | ACCA Certified</h1>
-    <p data-aos="fade-up">lawsell2023@gmail.com • 07475201643 • Birmingham, UK</p>
-    <div class="contact-links" data-aos="fade-up" data-aos-delay="100">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Download Résumé</a>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">Finance Analyst</div>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">☰</div>
     </div>
-  </header>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Finance Analyst | ACCA Certified</h1>
+      <p>Delivering Strategic Financial Insights with Over 15 Years of Experience</p>
+      <a href="#contact" class="cta-button">Get in Touch</a>
+    </div>
+  </section>
 
   <div class="container">
-    <div class="headshot" data-aos="zoom-in"></div>
-
-    <section class="section summary" data-aos="fade-right">
+    <section class="section about" id="about" data-aos="fade-right">
+      <div class="headshot" loading="lazy"></div>
       <h2>Professional Summary</h2>
       <p>
-        Analytical and commercially minded Finance Analyst with 15+ years of experience in financial reporting, business performance analysis, and strategic planning within banking and financial services...
+        Analytical and commercially minded Finance Analyst with 15+ years of experience in financial reporting, business performance analysis, and strategic planning within banking and financial services. Skilled in delivering actionable insights and driving business growth through data-driven strategies.
       </p>
     </section>
 
-    <section class="section skills" data-aos="fade-left">
+    <section class="section skills" id="skills" data-aos="fade-left">
       <h2>Areas of Expertise</h2>
-      <ul>
-        <li>Risk Management</li>
-        <li>Financial Reporting</li>
-        <li>Real Estate Investment Evaluation</li>
-        <li>Process Optimization & Automation</li>
-        <li>Financial Accounting</li>
-        <li>Strategic Business Planning</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill-item">Risk Management</div>
+        <div class="skill-item">Financial Reporting</div>
+        <div class="skill-item">Real Estate Investment Evaluation</div>
+        <div class="skill-item">Process Optimization & Automation</div>
+        <div class="skill-item">Financial Accounting</div>
+        <div class="skill-item">Strategic Business Planning</div>
+      </div>
     </section>
 
-    <section class="section projects" data-aos="fade-up">
+    <section class="section projects" id="projects" data-aos="fade-up">
       <h2>Featured Projects</h2>
-
-      <div class="project" data-aos="fade-up" data-aos-delay="100">
+      <article class="project" data-aos="fade-up" data-aos-delay="100">
         <h3>Sweet Bread Bakery Financial Model</h3>
         <p>Developed a detailed Excel-based financial model for a small bakery business, including revenue projections, cost breakdown, and profitability scenarios.</p>
         <a href="Sweet Bread Bakery model.xlsx" download>Download Excel Model</a>
-      </div>
-
-      <div class="project" data-aos="fade-up" data-aos-delay="200">
+      </article>
+      <article class="project" data-aos="fade-up" data-aos-delay="200">
         <h3>Expa Supermarket Business Data Analysis</h3>
         <p>Analyzed supermarket sales and operational data to identify trends, cost-saving opportunities, and strategic planning inputs.</p>
         <a href="Expa Supermarket data (1).xlsx" download>Download Dataset</a>
-      </div>
-
-      <div class="project" data-aos="fade-up" data-aos-delay="300">
+      </article>
+      <article class="project" data-aos="fade-up" data-aos-delay="300">
         <h3>10Alytics Power BI Dashboard</h3>
         <p>Interactive Power BI dashboard showcasing performance metrics, KPIs, and strategic financial analysis for senior leadership.</p>
         <a href="10Alytics Dashboard.xlsx" download>Download Dashboard File</a>
+      </article>
+    </section>
+
+    <section class="section contact" id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required aria-label="Name" />
+        <input type="email" placeholder="Your Email" required aria-label="Email" />
+        <textarea placeholder="Your Message" rows="5" required aria-label="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align: center; margin-top: 1rem;">
+        <a href="mailto:lawsell2023@gmail.com">lawsell2023@gmail.com</a> | 07475201643
+      </p>
+      <div style="text-align: center; margin-top: 1rem;">
+        <a href="#" class="cta-button" style="margin: 0 0.5rem;">LinkedIn</a>
+        <a href="#" class="cta-button" style="margin: 0 0.5rem;">GitHub</a>
+        <a href="#" class="cta-button" style="margin: 0 0.5rem;">Download Résumé</a>
       </div>
     </section>
   </div>
@@ -250,26 +383,61 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Initialize AOS
     AOS.init({
-      duration: 800,
+      duration: 1000,
       easing: 'ease-out',
       once: true
     });
 
-    // Sticky header effect
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      header.classList.toggle('sticky', window.scrollY > 0);
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
     });
 
-    // Smooth scrolling for links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+    // Smooth Scrolling & Active Link Highlight
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        const targetId = link.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+          hamburger.textContent = '☰';
+        }
       });
+    });
+
+    // Active Link on Scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.section, .hero');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 60) {
+          current = section.getAttribute('id');
+        }
+      });
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Form Validation
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Message sent! (This is a demo; no actual form submission implemented.)');
+      form.reset();
     });
   </script>
 </body>
