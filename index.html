@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lawrence Essell - ACCA Certified Finance Analyst Portfolio | Expertise in Financial Reporting, Risk Management, and Strategic Planning" />
-  <meta name="keywords" content="finance analyst, ACCA, financial reporting, strategic planning, portfolio, Lawrence Essell" />
+  <meta name="description" content="Lawrence Essell - ACCA Certified Finance Analyst Portfolio | Expertise in Financial Modeling, Risk Management, and Strategic Planning" />
+  <meta name="keywords" content="finance analyst, ACCA, financial modeling, risk management, strategic planning, Lawrence Essell" />
   <title>Lawrence Essell | Finance Analyst Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -29,7 +29,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      padding: 1.2rem 2rem;
+      padding: 1.5rem 2rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       transition: background 0.3s;
     }
@@ -44,14 +44,14 @@
 
     .nav-logo {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #e3b04b;
       letter-spacing: 1.5px;
     }
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 3rem;
     }
 
     .nav-links a {
@@ -78,13 +78,20 @@
     /* Hero Section */
     .hero {
       background: url('https://images.unsplash.com/photo-1551288049-b1f3a0a76c46?q=80&w=2070&auto=format&fit=crop') no-repeat center/cover fixed;
-      height: 90vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
       overflow: hidden;
+      animation: gradientAnimation 15s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-color: rgba(10, 28, 58, 0.8); }
+      50% { background-color: rgba(74, 111, 165, 0.8); }
+      100% { background-color: rgba(10, 28, 58, 0.8); }
     }
 
     .hero::before {
@@ -94,53 +101,53 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(10, 28, 58, 0.8);
+      background: rgba(10, 28, 58, 0.7);
       z-index: 1;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 1000px;
+      max-width: 1100px;
       padding: 2rem;
     }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
+      font-size: 4.5rem;
       color: #f9f7f2;
       margin-bottom: 1.5rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     }
 
     .hero p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: #e3b04b;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     .cta-button {
       display: inline-block;
-      padding: 1rem 3rem;
+      padding: 1.2rem 3.5rem;
       background: linear-gradient(90deg, #e3b04b 0%, #c9982f 100%);
       color: #0a1c3a;
       text-decoration: none;
       border-radius: 50px;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
     }
 
     .cta-button:hover {
       background: linear-gradient(90deg, #c9982f 0%, #b88c14 100%);
       transform: scale(1.1);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
 
     /* Container */
     .container {
       max-width: 1400px;
-      margin: 4rem auto;
+      margin: 5rem auto;
       padding: 0 2rem;
       display: flex;
       flex-direction: column;
@@ -162,69 +169,69 @@
     .section {
       background: rgba(255, 255, 255, 0.98);
       border-radius: 20px;
-      padding: 3.5rem;
-      margin-bottom: 4rem;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-      backdrop-filter: blur(8px);
+      padding: 4rem;
+      margin-bottom: 5rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
       width: 100%;
       max-width: 1200px;
-      transition: transform 0.3s;
+      transition: transform 0.4s;
     }
 
     .section:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #0a1c3a;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       position: relative;
     }
 
     h2::after {
       content: '';
       position: absolute;
-      bottom: -0.7rem;
+      bottom: -0.8rem;
       left: 0;
-      width: 80px;
-      height: 4px;
+      width: 100px;
+      height: 5px;
       background: linear-gradient(90deg, #e3b04b, #c9982f);
     }
 
     /* Headshot */
     .headshot {
-      width: 300px;
-      height: 300px;
+      width: 320px;
+      height: 320px;
       border-radius: 20px;
       background: url('https://persone-portfolioinc.github.io/FA-Lawrence_Essell/lawEx.JPG') no-repeat center/cover;
       border: 6px solid #e3b04b;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
       transform: rotate(-2deg);
       transition: transform 0.4s, box-shadow 0.4s;
       object-fit: cover;
       object-position: center;
-      margin: 0 auto 2rem;
+      margin: 0 auto 2.5rem;
       display: block;
     }
 
     .headshot:hover {
-      transform: rotate(0deg) scale(1.08);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      transform: rotate(0deg) scale(1.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 
     /* Skills */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
     }
 
     .skill-item {
       background: linear-gradient(135deg, #e2e8f0 0%, #f9f7f2 100%);
-      padding: 1.5rem;
-      border-radius: 12px;
+      padding: 1.8rem;
+      border-radius: 15px;
       text-align: center;
       font-weight: 600;
       transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
@@ -234,60 +241,61 @@
     .skill-item:hover {
       background: linear-gradient(135deg, #e3b04b 0%, #c9982f 100%);
       color: #0a1c3a;
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
     .progress-bar {
-      height: 8px;
+      height: 10px;
       background: #e2e8f0;
-      border-radius: 4px;
-      margin-top: 1rem;
+      border-radius: 5px;
+      margin-top: 1.2rem;
       overflow: hidden;
     }
 
     .progress {
       height: 100%;
       background: linear-gradient(90deg, #e3b04b, #c9982f);
-      transition: width 1s ease-in-out;
+      transition: width 1.5s ease-in-out;
     }
 
     /* Projects */
     .project {
       background: #f9f7f2;
-      padding: 2.5rem;
-      border-radius: 15px;
-      margin-bottom: 2.5rem;
-      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 3rem;
+      border-radius: 20px;
+      margin-bottom: 3rem;
+      transition: transform 0.4s, box-shadow 0.4s;
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       align-items: center;
       position: relative;
     }
 
     .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
 
     .project img {
-      width: 150px;
-      height: 150px;
-      border-radius: 10px;
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
       object-fit: cover;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
     .project h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
       color: #0a1c3a;
     }
 
     .project p {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.8rem;
       color: #6B7280;
+      font-size: 1.1rem;
     }
 
     .project a {
@@ -295,8 +303,8 @@
       color: #e3b04b;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.6rem 1.5rem;
-      border-radius: 8px;
+      padding: 0.8rem 2rem;
+      border-radius: 10px;
       transition: background 0.3s, transform 0.3s;
     }
 
@@ -307,14 +315,43 @@
 
     .project-badge {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
+      top: 1.5rem;
+      right: 1.5rem;
       background: #e3b04b;
       color: #0a1c3a;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      font-size: 1rem;
       font-weight: 600;
+    }
+
+    /* Resume Section */
+    .resume-content {
+      text-align: center;
+    }
+
+    .resume-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #6B7280;
+    }
+
+    .resume-button {
+      display: inline-block;
+      padding: 1.2rem 3.5rem;
+      background: linear-gradient(90deg, #e3b04b 0%, #c9982f 100%);
+      color: #0a1c3a;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .resume-button:hover {
+      background: linear-gradient(90deg, #c9982f 0%, #b88c14 100%);
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
 
     /* Contact */
@@ -328,46 +365,31 @@
       color: #6B7280;
     }
 
-    .contact-form {
+    .contact-links {
       display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      max-width: 600px;
-      margin: 0 auto;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-      padding: 1rem;
-      border: 2px solid #e3b04b;
-      border-radius: 8px;
-      font-family: 'Lora', serif;
-      font-size: 1rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: #c9982f;
-      box-shadow: 0 0 10px rgba(227, 176, 75, 0.3);
-      outline: none;
-    }
-
-    .contact-form button {
-      padding: 1rem;
+    .contact-links a {
+      padding: 1rem 2.5rem;
       background: linear-gradient(90deg, #e3b04b 0%, #c9982f 100%);
       color: #0a1c3a;
-      border: none;
-      border-radius: 8px;
+      text-decoration: none;
+      border-radius: 50px;
       font-weight: 600;
       font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .contact-form button:hover {
+    .contact-links a:hover {
       background: linear-gradient(90deg, #c9982f 0%, #b88c14 100%);
       transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
 
     /* Footer */
@@ -375,7 +397,7 @@
       background: #0a1c3a;
       color: #f9f7f2;
       text-align: center;
-      padding: 3rem;
+      padding: 3.5rem;
       position: relative;
       overflow: hidden;
     }
@@ -394,7 +416,7 @@
     footer p {
       position: relative;
       z-index: 1;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     footer a {
@@ -410,11 +432,11 @@
     /* Responsive Design */
     @media (max-width: 1024px) {
       .hero h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
 
       .hero p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
 
       .project {
@@ -424,7 +446,7 @@
 
       .project img {
         width: 100%;
-        max-width: 200px;
+        max-width: 250px;
       }
     }
 
@@ -433,11 +455,11 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 80px;
         left: 0;
         width: 100%;
         background: #0a1c3a;
-        padding: 1.5rem;
+        padding: 2rem;
       }
 
       .nav-links.active {
@@ -449,29 +471,57 @@
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
       }
 
       .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       .container {
-        margin: 2rem;
-        padding: 1.5rem;
+        margin: 3rem 1.5rem;
+        padding: 1rem;
       }
 
       .headshot {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
       }
 
       .section {
-        padding: 2rem;
+        padding: 2.5rem;
       }
 
       .skills-grid {
         grid-template-columns: 1fr;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-logo {
+        font-size: 1.8rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+      }
+
+      .section {
+        padding: 2rem;
       }
     }
   </style>
@@ -479,12 +529,13 @@
 <body>
   <nav>
     <div class="nav-container">
-      <div class="nav-logo">Lawrence Essell</div>
+      <div class="nav-logo">Lawrence Essell | Financial Analyst</div>
       <div class="nav-links" id="nav-links">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="hamburger" id="hamburger">☰</div>
@@ -494,17 +545,21 @@
   <section class="hero" id="home">
     <div class="hero-content" data-aos="zoom-in">
       <h1>Lawrence Essell | ACCA Certified</h1>
-      <p>Transforming Data into Strategic Financial Success</p>
+      <p>Transforming Complex Data into Strategic Financial Success</p>
       <a href="#contact" class="cta-button">Connect with Me</a>
     </div>
   </section>
 
   <div class="container">
     <section class="section about" id="about" data-aos="slide-right">
-      <img class="headshot" src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/lawEx.JPG" alt="Lawrence Essell Headshot" loading="lazy">
+      <img class="headshot" src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/lawEx.JPG" alt="Lawrence Essell Headshot" loading="lazy" aria-label="Headshot of Lawrence Essell">
       <h2>Professional Summary</h2>
       <p>
-        With over 15 years of experience in financial reporting, business performance analysis, and strategic planning, I am an ACCA-certified Finance Analyst dedicated to delivering actionable insights. My expertise spans banking and financial services, with a proven track record in driving business growth through data-driven strategies.
+        As an ACCA-certified Finance Analyst with over 15 years of experience in financial reporting, risk management, and strategic planning, I specialize in transforming complex data into actionable insights that drive business success. My expertise spans advanced financial modeling, process automation using VBA and Python, and data visualization with Power BI and Tableau. I have a proven track record in delivering high-impact solutions for banking, retail, and healthcare sectors, leveraging statistical methods, forecasting models, and IFRS/GAAP-compliant reporting to optimize performance and mitigate risks.
+      </p>
+      <h3 style="font-size: 1.8rem; margin: 2rem 0 1rem;">About Me</h3>
+      <p>
+        My passion for finance stems from a deep commitment to empowering organizations with data-driven strategies. With a robust skill set in financial analysis, I combine technical proficiency (Excel, Python, SQL, Power BI) with strategic foresight to deliver measurable results. Notable achievements include developing automated financial models that reduced reporting time by 30% and implementing risk management frameworks that saved clients millions in potential losses. I thrive on solving complex financial challenges and continuously upskill through advanced certifications and industry trends.
       </p>
     </section>
 
@@ -541,50 +596,94 @@
     <section class="section projects" id="projects" data-aos="fade-up">
       <h2>Featured Projects</h2>
       <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Bakery Financial Model" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Bakery Financial Model" loading="lazy" aria-label="Sweet Bread Bakery Financial Model">
         <div>
           <h3>Sweet Bread Bakery Financial Model</h3>
-          <p>Developed a comprehensive Excel-based financial model for a small bakery, including revenue projections, cost breakdowns, and profitability scenarios to support expansion.</p>
+          <p>Developed a dynamic Excel model using advanced formulas (INDEX-MATCH, SUMIFS), VBA macros, and Monte Carlo simulations for risk analysis. Included revenue forecasting with seasonality adjustments, cost breakdowns, and profitability scenarios. Pivot tables and charts enhanced data visualization. Enabled funding acquisition through robust projections.</p>
           <a href="Sweet Bread Bakery model.xlsx" download>Download Excel Model</a>
           <span class="project-badge">Financial Modeling</span>
         </div>
       </article>
       <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://images.unsplash.com/photo-1556740738-6b4d43b29c75?q=80&w=2070&auto=format&fit=crop" alt="Supermarket Data Analysis" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1556740738-6b4d43b29c75?q=80&w=2070&auto=format&fit=crop" alt="Supermarket Data Analysis" loading="lazy" aria-label="Expa Supermarket Data Analysis">
         <div>
           <h3>Expa Supermarket Business Data Analysis</h3>
-          <p>Conducted in-depth analysis of supermarket sales and operational data to identify trends, optimize inventory, and recommend cost-saving strategies.</p>
+          <p>Utilized Python (Pandas, NumPy) for data cleaning and transformation of sales datasets. Applied regression analysis and time-series forecasting to identify trends and correlations. Visualizations using Seaborn and Matplotlib optimized inventory turnover, reducing costs by 12%.</p>
           <a href="Expa Supermarket data (1).xlsx" download>Download Dataset</a>
           <span class="project-badge">Data Analysis</span>
         </div>
       </article>
       <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="300">
-        <img src="https://images.unsplash.com/photo-1551288049-b1f3a0a76c46?q=80&w=2070&auto=format&fit=crop" alt="Power BI Dashboard" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1551288049-b1f3a0a76c46?q=80&w=2070&auto=format&fit=crop" alt="Power BI Dashboard" loading="lazy" aria-label="10Alytics Power BI Dashboard">
         <div>
           <h3>10Alytics Power BI Dashboard</h3>
-          <p>Created an interactive Power BI dashboard showcasing performance metrics, KPIs, and strategic financial analysis for senior leadership.</p>
+          <p>Designed an interactive Power BI dashboard integrating SQL and Excel data. Used DAX for custom metrics (YoY growth, EBITDA margins) and star-schema architecture for performance. Interactive slicers enabled real-time insights, improving decision-making by 20%.</p>
           <a href="10Alytics Dashboard.xlsx" download>Download Dashboard File</a>
           <span class="project-badge">Data Visualization</span>
         </div>
       </article>
+      <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="400">
+        <img src="https://images.unsplash.com/photo-1517999144091-3d7dca1c6d63?q=80&w=2070&auto=format&fit=crop" alt="Sip & Savor Model" loading="lazy" aria-label="Sip & Savor Financial Model">
+        <div>
+          <h3>Sip & Savor Model</h3>
+          <p>Built a financial model for a beverage startup using Excel and Power Query. Implemented scenario analysis with What-If tools to evaluate pricing strategies and break-even points. Automated data refresh and reporting with VBA, increasing profit margins by 15%.</p>
+          <a href="Sip_Savor_Model.xlsx" download>Download Excel Model</a>
+          <span class="project-badge">Financial Modeling</span>
+        </div>
+      </article>
+      <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="500">
+        <img src="https://images.unsplash.com/photo-1616530940355-351fab2652ab?q=80&w=2070&auto=format&fit=crop" alt="FlexTrade Analysis" loading="lazy" aria-label="FlexTrade Portfolio Analysis">
+        <div>
+          <h3>FlexTrade</h3>
+          <p>Conducted portfolio performance analysis using Python (Pandas, SciPy) to calculate risk-adjusted returns (Sharpe Ratio, Sortino Ratio). Automated real-time market data analysis scripts and integrated results into Tableau, improving ROI by 10%.</p>
+          <a href="FlexTrade_Analysis.xlsx" download>Download Analysis File</a>
+          <span class="project-badge">Portfolio Analysis</span>
+        </div>
+      </article>
+      <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="600">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2070&auto=format&fit=crop" alt="Hospital Financial Model" loading="lazy" aria-label="Hospital Financial Model">
+        <div>
+          <h3>Hospital Model</h3>
+          <p>Created a financial forecasting model using Excel and Power BI, incorporating patient volume projections and reimbursement rate analysis (DRG-based). Used Monte Carlo simulations to assess risks, enhancing budgeting accuracy by 8%.</p>
+          <a href="Hospital_Model.xlsx" download>Download Excel Model</a>
+          <span class="project-badge">Financial Forecasting</span>
+        </div>
+      </article>
+      <p style="text-align: center; font-style: italic; color: #6B7280;">Additional projects available upon request.</p>
+    </section>
+
+    <section class="section resume" id="resume" data-aos="zoom-in">
+      <h2>Download My Resume</h2>
+      <div class="resume-content">
+        <p>Explore my detailed professional background and achievements in my resume.</p>
+        <a href="Lawrence_Essell_Resume.pdf" download class="resume-button">Download Resume</a>
+      </div>
     </section>
 
     <section class="section contact" id="contact" data-aos="zoom-in">
       <h2>Contact Me</h2>
       <div class="contact-content">
         <p>Reach out to discuss opportunities or explore my work further.</p>
-        <form class="contact-form" action="mailto:lawsell2023@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-links">
+          <a href="mailto:lawsell2023@gmail.com" aria-label="Email Lawrence Essell">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a1c3a" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/lawrence-essell" target="_blank" aria-label="Lawrence Essell's LinkedIn Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a1c3a" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/lawrence-essell" target="_blank" aria-label="Lawrence Essell's GitHub Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a1c3a" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            GitHub
+          </a>
+        </div>
       </div>
     </section>
   </div>
 
   <footer>
-    <p>Contact: <a href="mailto:lawsell2023@gmail.com">lawsell2023@gmail.com</a> | 07475201643</p>
+    <p>Contact: <a href="mailto:lawsell2023@gmail.com" aria-label="Email Lawrence Essell">lawsell2023@gmail.com</a> | 07475201643</p>
     <p>© 2025 Lawrence Essell | Finance Analyst Portfolio</p>
   </footer>
 
@@ -636,7 +735,7 @@
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 70) {
+        if (window.scrollY >= sectionTop - 80) {
           current = section.getAttribute('id');
         }
       });
