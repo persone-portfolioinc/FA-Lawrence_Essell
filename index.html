@@ -31,7 +31,6 @@
       z-index: 1000;
       padding: 1.5rem 2rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: background 0.3s;
     }
 
     .nav-container {
@@ -45,7 +44,7 @@
     .nav-logo {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
-      color: #e3b04b;
+      color: #d4a017;
       letter-spacing: 1.5px;
     }
 
@@ -64,7 +63,7 @@
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: #e3b04b;
+      color: #d4a017;
       transform: translateY(-3px);
     }
 
@@ -85,13 +84,6 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      animation: gradientAnimation 15s ease infinite;
-    }
-
-    @keyframes gradientAnimation {
-      0% { background-color: rgba(10, 28, 58, 0.8); }
-      50% { background-color: rgba(74, 111, 165, 0.8); }
-      100% { background-color: rgba(10, 28, 58, 0.8); }
     }
 
     .hero::before {
@@ -101,7 +93,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(10, 28, 58, 0.7);
+      background: linear-gradient(135deg, rgba(10, 28, 58, 0.7), rgba(74, 111, 165, 0.7));
       z-index: 1;
     }
 
@@ -122,14 +114,14 @@
 
     .hero p {
       font-size: 1.5rem;
-      color: #e3b04b;
+      color: #d4a017;
       margin-bottom: 3rem;
     }
 
     .cta-button {
       display: inline-block;
       padding: 1.2rem 3.5rem;
-      background: linear-gradient(90deg, #e3b04b 0%, #c9982f 100%);
+      background: linear-gradient(90deg, #d4a017 0%, #b88c14 100%);
       color: #0a1c3a;
       text-decoration: none;
       border-radius: 50px;
@@ -139,7 +131,7 @@
     }
 
     .cta-button:hover {
-      background: linear-gradient(90deg, #c9982f 0%, #b88c14 100%);
+      background: linear-gradient(90deg, #b88c14 0%, #a07b12 100%);
       transform: scale(1.1);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
@@ -149,9 +141,7 @@
       max-width: 1400px;
       margin: 5rem auto;
       padding: 0 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      position: relative;
     }
 
     /* Background Graphics */
@@ -162,24 +152,23 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" opacity="0.05"><circle cx="50" cy="50" r="40" stroke="#e3b04b" stroke-width="2" fill="none"/></svg>') repeat;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" opacity="0.05"><path d="M30,120 Q75,150 120,120 T150,30" stroke="#d4a017" stroke-width="2" fill="none"/></svg>') repeat;
       z-index: -1;
     }
 
     .section {
-      background: rgba(255, 255, 255, 0.98);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 20px;
       padding: 4rem;
       margin-bottom: 5rem;
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
       backdrop-filter: blur(10px);
-      width: 100%;
-      max-width: 1200px;
-      transition: transform 0.4s;
+      transition: transform 0.4s, box-shadow 0.4s;
     }
 
     .section:hover {
       transform: translateY(-8px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
@@ -197,27 +186,26 @@
       left: 0;
       width: 100px;
       height: 5px;
-      background: linear-gradient(90deg, #e3b04b, #c9982f);
+      background: linear-gradient(90deg, #d4a017, #b88c14);
     }
 
     /* Headshot */
     .headshot {
-      width: 420px;
-      height: 420px;
-      border-radius: 20px;
-      background: url('https://persone-portfolioinc.github.io/FA-Lawrence_Essell/lawEx.jpg') no-repeat center/cover;
-      border: 7px solid #e3b04b;
+      width: 350px;
+      height: 350px;
+      border-radius: 15px;
+      border: 6px solid #d4a017;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
       transform: rotate(-2deg);
       transition: transform 0.4s, box-shadow 0.4s;
       object-fit: cover;
       object-position: center;
-      margin: 0 auto 2.5rem;
-      display: block;
+      float: left;
+      margin: 0 2.5rem 2rem 0;
     }
 
     .headshot:hover {
-      transform: rotate(0deg) scale(1.1);
+      transform: rotate(0deg) scale(1.05);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 
@@ -225,21 +213,20 @@
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     .skill-item {
-      background: linear-gradient(135deg, #e2e8f0 0%, #f9f7f2 100%);
+      background: linear-gradient(135deg, #f9f7f2 0%, #e2e8f0 100%);
       padding: 1.8rem;
       border-radius: 15px;
       text-align: center;
       font-weight: 600;
       transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-      position: relative;
     }
 
     .skill-item:hover {
-      background: linear-gradient(135deg, #e3b04b 0%, #c9982f 100%);
+      background: linear-gradient(135deg, #d4a017 0%, #b88c14 100%);
       color: #0a1c3a;
       transform: translateY(-10px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -255,7 +242,7 @@
 
     .progress {
       height: 100%;
-      background: linear-gradient(90deg, #e3b04b, #c9982f);
+      background: linear-gradient(90deg, #d4a017, #b88c14);
       transition: width 1.5s ease-in-out;
     }
 
@@ -265,10 +252,10 @@
       padding: 3rem;
       border-radius: 20px;
       margin-bottom: 3rem;
-      transition: transform 0.4s, box-shadow 0.4s;
       display: flex;
       gap: 2.5rem;
       align-items: center;
+      transition: transform 0.4s, box-shadow 0.4s;
       position: relative;
     }
 
@@ -278,11 +265,18 @@
     }
 
     .project img {
-      width: 180px;
-      height: 180px;
+      width: 250px;
+      height: 250px;
       border-radius: 12px;
       object-fit: cover;
+      object-position: center;
+      border: 4px solid #d4a017;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .project img:hover {
+      transform: scale(1.05);
     }
 
     .project h3 {
@@ -300,7 +294,7 @@
 
     .project a {
       display: inline-block;
-      color: #e3b04b;
+      color: #d4a017;
       text-decoration: none;
       font-weight: 600;
       padding: 0.8rem 2rem;
@@ -309,7 +303,7 @@
     }
 
     .project a:hover {
-      background: rgba(227, 176, 75, 0.3);
+      background: rgba(212, 160, 23, 0.3);
       transform: scale(1.05);
     }
 
@@ -317,7 +311,7 @@
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
-      background: #e3b04b;
+      background: #d4a017;
       color: #0a1c3a;
       padding: 0.6rem 1.2rem;
       border-radius: 25px;
@@ -339,7 +333,7 @@
     .resume-button {
       display: inline-block;
       padding: 1.2rem 3.5rem;
-      background: linear-gradient(90deg, #e3b04b 0%, #c9982f 100%);
+      background: linear-gradient(90deg, #d4a017 0%, #b88c14 100%);
       color: #0a1c3a;
       text-decoration: none;
       border-radius: 50px;
@@ -349,7 +343,7 @@
     }
 
     .resume-button:hover {
-      background: linear-gradient(90deg, #c9982f 0%, #b88c14 100%);
+      background: linear-gradient(90deg, #b88c14 0%, #a07b12 100%);
       transform: scale(1.1);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
@@ -374,7 +368,7 @@
 
     .contact-links a {
       padding: 1rem 2.5rem;
-      background: linear-gradient(90deg, #e3b04b 0%, #c9982f 100%);
+      background: linear-gradient(90deg, #d4a017 0%, #b88c14 100%);
       color: #0a1c3a;
       text-decoration: none;
       border-radius: 50px;
@@ -387,7 +381,7 @@
     }
 
     .contact-links a:hover {
-      background: linear-gradient(90deg, #c9982f 0%, #b88c14 100%);
+      background: linear-gradient(90deg, #b88c14 0%, #a07b12 100%);
       transform: scale(1.05);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
@@ -409,8 +403,14 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" opacity="0.1"><path d="M50,150 L150,50" stroke="#e3b04b" stroke-width="2"/></svg>') repeat;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" opacity="0.1"><path d="M50,150 Q100,200 150,150 T200,50" stroke="#d4a017" stroke-width="2" fill="none"/></svg>') repeat;
       z-index: 0;
+      animation: waveAnimation 20s linear infinite;
+    }
+
+    @keyframes waveAnimation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-200px); }
     }
 
     footer p {
@@ -420,13 +420,13 @@
     }
 
     footer a {
-      color: #e3b04b;
+      color: #d4a017;
       text-decoration: none;
       transition: color 0.3s;
     }
 
     footer a:hover {
-      color: #c9982f;
+      color: #b88c14;
     }
 
     /* Responsive Design */
@@ -445,8 +445,8 @@
       }
 
       .project img {
-        width: 100%;
-        max-width: 250px;
+        width: 200px;
+        height: 200px;
       }
     }
 
@@ -480,12 +480,13 @@
 
       .container {
         margin: 3rem 1.5rem;
-        padding: 1rem;
       }
 
       .headshot {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
+        float: none;
+        margin: 0 auto 2rem;
       }
 
       .section {
@@ -523,13 +524,18 @@
       .section {
         padding: 2rem;
       }
+
+      .project img {
+        width: 150px;
+        height: 150px;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
     <div class="nav-container">
-      <div class="nav-logo">Lawrence Essell | Financial Analyst</div>
+      <div class="nav-logo">Lawrence Essell | Finance Analyst</div>
       <div class="nav-links" id="nav-links">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
@@ -605,7 +611,7 @@
         </div>
       </article>
       <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://images.unsplash.com/photo-1556740738-6b4d43b29c75?q=80&w=2070&auto=format&fit=crop" alt="Supermarket Data Analysis" loading="lazy" aria-label="Expa Supermarket Data Analysis">
+        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/expanew.jpg" alt="Supermarket Data Analysis" loading="lazy" aria-label="Expa Supermarket Data Analysis">
         <div>
           <h3>Expa Business Analysis</h3>
           <p>Utilized Python (Pandas, NumPy) for data cleaning and transformation of sales datasets. Applied regression analysis and time-series forecasting to identify trends and correlations. Visualizations using Seaborn and Matplotlib optimized inventory turnover, reducing costs by 12%.</p>
@@ -613,8 +619,8 @@
           <span class="project-badge">Data Analysis</span>
         </div>
       </article>
-      <article class="project" data-tilt data-tilt-max="10" data-aos="fade-up" data-aos-delay="400">
-        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/expanew.jpg" alt="Power BI Dashboard" loading="lazy" aria-label="10Alytics Power BI Dashboard">
+      <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/10ana.jpg" alt="Power BI Dashboard" loading="lazy" aria-label="10Alytics Power BI Dashboard">
         <div>
           <h3>10Alytics Power BI Dashboard</h3>
           <p>Designed an interactive Power BI dashboard integrating SQL and Excel data. Used DAX for custom metrics (YoY growth, EBITDA margins) and star-schema architecture for performance. Interactive slicers enabled real-time insights, improving decision-making by 20%.</p>
@@ -623,7 +629,7 @@
         </div>
       </article>
       <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="400">
-        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/10ana.jpg" alt="Sip & Savor Model" loading="lazy" aria-label="Sip & Savor Financial Model">
+        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/sips.jpg" alt="Sip & Savor Model" loading="lazy" aria-label="Sip & Savor Financial Model">
         <div>
           <h3>Sip & Savor Model</h3>
           <p>Built a financial model for a beverage startup using Excel and Power Query. Implemented scenario analysis with What-If tools to evaluate pricing strategies and break-even points. Automated data refresh and reporting with VBA, increasing profit margins by 15%.</p>
@@ -632,7 +638,7 @@
         </div>
       </article>
       <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="500">
-        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/sips.jpg" alt="FlexTrade Analysis" loading="lazy" aria-label="FlexTrade Portfolio Analysis">
+        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/trade.jpg" alt="FlexTrade Analysis" loading="lazy" aria-label="FlexTrade Portfolio Analysis">
         <div>
           <h3>FlexTrade</h3>
           <p>Conducted portfolio performance analysis using Python (Pandas, SciPy) to calculate risk-adjusted returns (Sharpe Ratio, Sortino Ratio). Automated real-time market data analysis scripts and integrated results into Tableau, improving ROI by 10%.</p>
@@ -641,12 +647,12 @@
         </div>
       </article>
       <article class="project" data-tilt data-tilt-max="8" data-aos="fade-up" data-aos-delay="600">
-        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/trade.jpg" alt="Hospital Financial Model" loading="lazy" aria-label="Hospital Financial Model">
+        <img src="https://persone-portfolioinc.github.io/FA-Lawrence_Essell/hos.jpg" alt="Hospital Financial Model" loading="lazy" aria-label="Hospital Financial Model">
         <div>
           <h3>Hospital Model</h3>
           <p>Created a financial forecasting model using Excel and Power BI, incorporating patient volume projections and reimbursement rate analysis (DRG-based). Used Monte Carlo simulations to assess risks, enhancing budgeting accuracy by 8%.</p>
           <a href="Hospital_Model.xlsx" download>Download Excel Model</a>
-          <span class="project-badge">Financial Forecasting</span>
+          <span class="project-badge">Financial Forecasting</spanBlue
         </div>
       </article>
       <p style="text-align: center; font-style: italic; color: #6B7280;">Additional projects available upon request.</p>
@@ -673,9 +679,9 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a1c3a" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             LinkedIn
           </a>
-          <a href="https://github.com/lawrence-essell" target="_blank" aria-label="Lawrence Essell's GitHub Profile">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a1c3a" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            GitHub
+          <a href="Lawrence_Essell_Resume.pdf" download aria-label="Download Lawrence Essell's Resume">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a1c3a" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+            Download Resume
           </a>
         </div>
       </div>
